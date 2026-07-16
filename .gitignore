@@ -1,0 +1,7 @@
+# Internal working documents — not for public consumption
+TRACKING.md
+
+# OS / editor noise
+.DS_Store
+.vscode/
+*.swp
