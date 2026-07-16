@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Every migration failure mode in this project traces back to the same root cause: someone wrote a migration plan before they actually knew what was in the source system. A table nobody documented turns out to feed a finance report. A "small" MySQL database turns out to have a 40GB table with no primary key. A spreadsheet turns out to be the only record of a business rule that lives nowhere else. This doc is the discovery pass that has to happen before `source_pattern_playbooks.md` or `validation_and_cutover.md` mean anything — a migration plan built on an assumed schema instead of a discovered one is the same mistake this project's own audit flagged elsewhere as "asserted, not designed."
+Every migration failure mode in this project traces back to the same root cause: someone wrote a migration plan before they actually knew what was in the source system. A table nobody documented turns out to feed a finance report. A "small" MySQL database turns out to have a 40GB table with no primary key. A spreadsheet turns out to be the only record of a business rule that lives nowhere else. This doc is the discovery pass that has to happen before `source_pattern_playbooks.md` or `validation_and_cutover.md` mean anything — a migration plan built on an assumed schema instead of a discovered one is asserted, not designed, and that gap is exactly what shows up as a cutover-day surprise instead of a Tuesday-afternoon planning conversation.
 
 ---
 

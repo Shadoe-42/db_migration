@@ -21,7 +21,13 @@ As with `data_sec`: real technology, fictional company. Every tool and syntax re
 
 ## Related
 
+Sibling repos in the same portfolio, all reusing or extending `data_sec`'s architecture rather than duplicating it:
+
 - [`data_sec`](https://github.com/Shadoe-42/data_sec) — the landing zone, Snowflake security model, and compliance crosswalk this project builds on top of
+- [`finops_remediation`](https://github.com/Shadoe-42/finops_remediation) — Snowflake cost-incident diagnosis and permanent remediation
+- [`cloud_retrofit`](https://github.com/Shadoe-42/cloud_retrofit) — risk-tiered retrofit of a live environment that grew without a plan
+- [`dc_decomm`](https://github.com/Shadoe-42/dc_decomm) — full on-prem-to-cloud exit, reusing `data_sec`'s landing zone Terraform directly
+- [`ma_consolidation`](https://github.com/Shadoe-42/ma_consolidation) — post-merger data platform consolidation, extraction mechanics for Oracle/SQL Server borrowed from this repo
 
 ## License
 
