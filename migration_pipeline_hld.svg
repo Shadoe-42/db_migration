@@ -1,0 +1,148 @@
+<svg viewBox="0 0 1400 780" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="780" fill="#ffffff"/>
+
+  <text x="700" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1a2330">Database Migration Pipeline — Heterogeneous Sources to Governed Snowflake</text>
+  <text x="700" y="55" text-anchor="middle" font-size="12.5" fill="#5b6472">Meridian Analytics — grounded in migration_assessment_methodology.md through validation_and_cutover.md</text>
+
+  <!-- Stage 1: Sources -->
+  <rect x="30" y="110" width="175" height="430" rx="8" fill="#f2f5f8" stroke="#5b6472" stroke-width="1.5"/>
+  <text x="117" y="134" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a2330">Sources</text>
+
+  <rect x="45" y="150" width="145" height="60" rx="6" fill="#ffffff" stroke="#5b6472"/>
+  <text x="117" y="172" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1a2330">Oracle</text>
+  <text x="117" y="188" text-anchor="middle" font-size="9" fill="#5b6472">high-freq. update</text>
+
+  <rect x="45" y="222" width="145" height="60" rx="6" fill="#ffffff" stroke="#5b6472"/>
+  <text x="117" y="244" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1a2330">MySQL</text>
+  <text x="117" y="260" text-anchor="middle" font-size="9" fill="#5b6472">low-freq. update</text>
+
+  <rect x="45" y="294" width="145" height="70" rx="6" fill="#ffffff" stroke="#5b6472"/>
+  <text x="117" y="316" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1a2330">MongoDB</text>
+  <text x="117" y="332" text-anchor="middle" font-size="9" fill="#5b6472">schema drift</text>
+  <text x="117" y="346" text-anchor="middle" font-size="9" fill="#5b6472">across collection era</text>
+
+  <rect x="45" y="376" width="145" height="70" rx="6" fill="#fdf2f2" stroke="#c0392b"/>
+  <text x="117" y="398" text-anchor="middle" font-size="10.5" font-weight="600" fill="#7a2018">Access / Excel</text>
+  <text x="117" y="414" text-anchor="middle" font-size="9" fill="#7a2018">shadow IT —</text>
+  <text x="117" y="428" text-anchor="middle" font-size="9" fill="#7a2018">no schema, no owner</text>
+
+  <text x="117" y="475" text-anchor="middle" font-size="9" fill="#8a8f98">discovered via</text>
+  <text x="117" y="488" text-anchor="middle" font-size="9" fill="#8a8f98">migration_assessment_</text>
+  <text x="117" y="500" text-anchor="middle" font-size="9" fill="#8a8f98">methodology.md</text>
+
+  <line x1="205" y1="325" x2="245" y2="325" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowM)"/>
+
+  <!-- Stage 2: Readiness Matrix -->
+  <rect x="250" y="230" width="185" height="190" rx="8" fill="#eef7fb" stroke="#1a8cc4" stroke-width="1.5"/>
+  <text x="342" y="254" text-anchor="middle" font-size="12" font-weight="700" fill="#0d4a63">Readiness Matrix</text>
+  <text x="342" y="270" text-anchor="middle" font-size="9" fill="#3a6b80">scored, not guessed</text>
+
+  <text x="270" y="292" font-size="9.5" fill="#1a2330">• write pattern</text>
+  <text x="270" y="310" font-size="9.5" fill="#1a2330">• sensitive data flag</text>
+  <text x="270" y="328" font-size="9.5" fill="#1a2330">• dependency count</text>
+  <text x="270" y="346" font-size="9.5" fill="#1a2330">• complexity ≠ volume</text>
+  <text x="270" y="368" font-size="9.5" font-weight="600" fill="#0d4a63">→ priority order</text>
+  <text x="270" y="386" font-size="9" fill="#3a6b80">(smallest ≠ easiest —</text>
+  <text x="270" y="400" font-size="9" fill="#3a6b80">Access/Excel often #1)</text>
+
+  <line x1="435" y1="325" x2="475" y2="325" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowM)"/>
+
+  <!-- Stage 3: Extraction, per source type -->
+  <rect x="480" y="110" width="230" height="430" rx="8" fill="#fff4e8" stroke="#d98c2b" stroke-width="1.5"/>
+  <text x="595" y="134" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a5316">Extraction — per source_pattern_playbooks.md</text>
+
+  <rect x="495" y="150" width="200" height="70" rx="6" fill="#ffffff" stroke="#d98c2b"/>
+  <text x="595" y="170" text-anchor="middle" font-size="10" font-weight="600" fill="#8a5316">Relational: log-based CDC</text>
+  <text x="595" y="184" text-anchor="middle" font-size="9" fill="#8a5316">(AWS DMS) or bulk extract</text>
+  <text x="595" y="198" text-anchor="middle" font-size="9" fill="#8a5316">— chosen by write pattern</text>
+
+  <rect x="495" y="230" width="200" height="70" rx="6" fill="#ffffff" stroke="#d98c2b"/>
+  <text x="595" y="250" text-anchor="middle" font-size="10" font-weight="600" fill="#8a5316">MongoDB: document</text>
+  <text x="595" y="264" text-anchor="middle" font-size="9" fill="#8a5316">shape discovery across</text>
+  <text x="595" y="278" text-anchor="middle" font-size="9" fill="#8a5316">full collection history</text>
+
+  <rect x="495" y="310" width="200" height="70" rx="6" fill="#ffffff" stroke="#d98c2b"/>
+  <text x="595" y="330" text-anchor="middle" font-size="10" font-weight="600" fill="#8a5316">Shadow IT: one-time bulk</text>
+  <text x="595" y="344" text-anchor="middle" font-size="9" fill="#8a5316">load, business-logic</text>
+  <text x="595" y="358" text-anchor="middle" font-size="9" fill="#8a5316">translation, not a pipeline</text>
+
+  <rect x="495" y="392" width="200" height="130" rx="6" fill="#ffffff" stroke="#d98c2b"/>
+  <text x="595" y="412" text-anchor="middle" font-size="10" font-weight="600" fill="#8a5316">Ingestion mechanism</text>
+  <text x="595" y="430" text-anchor="middle" font-size="9" fill="#8a5316">chosen by latency need —</text>
+  <text x="595" y="446" text-anchor="middle" font-size="9" fill="#8a5316">batch COPY INTO,</text>
+  <text x="595" y="462" text-anchor="middle" font-size="9" fill="#8a5316">Snowpipe, or Snowpipe</text>
+  <text x="595" y="478" text-anchor="middle" font-size="9" fill="#8a5316">Streaming (5s latency,</text>
+  <text x="595" y="494" text-anchor="middle" font-size="9" fill="#8a5316">auto-managed PIPE)</text>
+
+  <line x1="710" y1="325" x2="750" y2="325" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowM)"/>
+
+  <!-- Stage 4: RAW staging -->
+  <rect x="755" y="230" width="185" height="190" rx="8" fill="#f4f0fb" stroke="#7a5fb0" stroke-width="1.5"/>
+  <text x="847" y="254" text-anchor="middle" font-size="12" font-weight="700" fill="#3d2c5c">RAW Schema</text>
+  <text x="847" y="270" text-anchor="middle" font-size="9" fill="#5c4a80">unclassified, isolated</text>
+
+  <text x="775" y="292" font-size="9.5" fill="#3d2c5c">• VARIANT for semi-</text>
+  <text x="775" y="306" font-size="9.5" fill="#3d2c5c">  structured (Mongo)</text>
+  <text x="775" y="324" font-size="9.5" fill="#3d2c5c">• typed cols for</text>
+  <text x="775" y="338" font-size="9.5" fill="#3d2c5c">  relational sources</text>
+  <text x="775" y="360" font-size="9.5" font-weight="600" fill="#3d2c5c">Streams+Tasks (row edits,</text>
+  <text x="775" y="374" font-size="9.5" font-weight="600" fill="#3d2c5c">erasure) or Dynamic Tables</text>
+  <text x="775" y="388" font-size="9.5" font-weight="600" fill="#3d2c5c">(pure transform layers)</text>
+
+  <line x1="940" y1="325" x2="980" y2="325" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowM)"/>
+
+  <!-- Stage 5: Validation gate -->
+  <rect x="985" y="230" width="175" height="190" rx="8" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="1072" y="254" text-anchor="middle" font-size="12" font-weight="700" fill="#7a2018">Validation Gate</text>
+  <text x="1072" y="270" text-anchor="middle" font-size="9" fill="#7a2018">where migrations fail</text>
+
+  <text x="1000" y="292" font-size="9.5" fill="#5a2018">• row counts, always</text>
+  <text x="1000" y="310" font-size="9.5" fill="#5a2018">• checksum @ Medium+</text>
+  <text x="1000" y="328" font-size="9.5" fill="#5a2018">• business-rule checks</text>
+  <text x="1000" y="350" font-size="9.5" font-weight="600" fill="#7a2018">parallel run</text>
+  <text x="1000" y="364" font-size="9" fill="#5a2018">(high-dependency)</text>
+  <text x="1000" y="382" font-size="9.5" font-weight="600" fill="#7a2018">vs. big bang</text>
+  <text x="1000" y="396" font-size="9" fill="#5a2018">(low-dependency)</text>
+
+  <line x1="1160" y1="325" x2="1200" y2="325" stroke="#5b6472" stroke-width="2" marker-end="url(#arrowM)"/>
+
+  <!-- Stage 6: Governed schema -->
+  <rect x="1205" y="230" width="170" height="190" rx="8" fill="#e8f6ec" stroke="#2f8f52" stroke-width="1.5"/>
+  <text x="1290" y="254" text-anchor="middle" font-size="12" font-weight="700" fill="#1d5c34">Governed Schema</text>
+  <text x="1290" y="270" text-anchor="middle" font-size="9" fill="#2f6b45">classified on promotion</text>
+
+  <text x="1220" y="292" font-size="9.5" fill="#2f6b45">RAP + masking from</text>
+  <text x="1220" y="306" font-size="9.5" fill="#2f6b45">snowflake_data_security_</text>
+  <text x="1220" y="320" font-size="9.5" fill="#2f6b45">guardrails.md — same</text>
+  <text x="1220" y="334" font-size="9.5" fill="#2f6b45">pattern, not reinvented</text>
+  <text x="1220" y="356" font-size="9.5" font-weight="600" fill="#1d5c34">Rollback window,</text>
+  <text x="1220" y="370" font-size="9.5" font-weight="600" fill="#1d5c34">then source retired —</text>
+  <text x="1220" y="384" font-size="9.5" font-weight="600" fill="#1d5c34">cattle, not pets</text>
+
+  <!-- Legend -->
+  <rect x="30" y="570" width="1340" height="150" rx="8" fill="#f8f9fa" stroke="#c7ccd1"/>
+  <text x="50" y="594" font-size="11" font-weight="600" fill="#3a4250">Legend</text>
+
+  <rect x="50" y="606" width="14" height="14" fill="#f2f5f8" stroke="#5b6472"/>
+  <text x="70" y="617" font-size="9.5" fill="#3a4250">Source system</text>
+  <rect x="220" y="606" width="14" height="14" fill="#eef7fb" stroke="#1a8cc4"/>
+  <text x="240" y="617" font-size="9.5" fill="#3a4250">Assessment / scoring</text>
+  <rect x="420" y="606" width="14" height="14" fill="#fff4e8" stroke="#d98c2b"/>
+  <text x="440" y="617" font-size="9.5" fill="#3a4250">Extraction / ingestion</text>
+  <rect x="620" y="606" width="14" height="14" fill="#f4f0fb" stroke="#7a5fb0"/>
+  <text x="640" y="617" font-size="9.5" fill="#3a4250">RAW / staging</text>
+  <rect x="790" y="606" width="14" height="14" fill="#fdf2f2" stroke="#c0392b"/>
+  <text x="810" y="617" font-size="9.5" fill="#3a4250">Validation gate</text>
+  <rect x="960" y="606" width="14" height="14" fill="#e8f6ec" stroke="#2f8f52"/>
+  <text x="980" y="617" font-size="9.5" fill="#3a4250">Governed / classified</text>
+
+  <text x="50" y="646" font-size="9.5" fill="#5b6472">Reads left to right through the four docs in this repo: migration_assessment_methodology.md → source_pattern_playbooks.md →</text>
+  <text x="50" y="663" font-size="9.5" fill="#5b6472">snowflake_ingestion_landing_patterns.md → validation_and_cutover.md. Classification and RAPs are never reapplied from scratch —</text>
+  <text x="50" y="680" font-size="9.5" fill="#5b6472">they're the same governed pattern already established in the sibling data_sec repository.</text>
+</svg>

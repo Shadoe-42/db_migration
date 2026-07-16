@@ -13,6 +13,7 @@ As with `data_sec`: real technology, fictional company. Every tool and syntax re
 
 | Path | What's there |
 |---|---|
+| `migration_pipeline_hld.svg` / `.png` | Architecture diagram — the full pipeline from heterogeneous sources through readiness scoring, extraction, RAW landing, validation, to governed schema |
 | `migration_assessment_methodology.md` | Discovery and profiling before any plan is written — schema inventory, data profiling, downstream dependency mapping, and a scored migration readiness matrix |
 | `source_pattern_playbooks.md` | Extraction patterns by source type — relational CDC vs. bulk load, MongoDB's schema-flattening problem, and the Access/Excel shadow-IT case |
 | `snowflake_ingestion_landing_patterns.md` | How data actually lands — Snowpipe vs. Snowpipe Streaming vs. batch COPY INTO, Streams/Tasks vs. Dynamic Tables, and staging before governance |
